@@ -20,8 +20,8 @@ The file to define settings of YOLO
 class YOLO(object):
     # set initial arguments
     _defaults = {
-        # "model_path": 'model_data/ep045-loss3.020-val_loss2.454.pth',
-        "model_path": 'model_data/yolov4_tiny_weights_voc.pth',
+        "model_path": 'model_data/final.pth',
+#         "model_path": 'model_data/yolov4_tiny_weights_voc.pth',
         "classes_path": 'model_data/voc_classes.txt',
         "anchors_path": 'model_data/yolo_anchors.txt',
         "anchors_mask": [[3, 4, 5], [1, 2, 3]],
