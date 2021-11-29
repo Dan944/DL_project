@@ -81,7 +81,7 @@ for row in class_relation:
 condition_prob_file.close()
 
 pre_prob_file = open("bayes/pre_prob.txt", "w")
-for item in class_prob:
-    pre_prob_file.write("%.5f," % class_prob[item])
-pre_prob_file.write("\n")
+for item in range(len(class_prob)-1):
+    pre_prob_file.write("%.5f," % list(class_prob.values())[item])
+pre_prob_file.write("%.5f\n" % list(class_prob.values())[len(class_prob)-1])
 pre_prob_file.close()
