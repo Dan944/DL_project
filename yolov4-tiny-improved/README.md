@@ -1,26 +1,13 @@
-## YOLOV4-Tiny：You Only Look Once-Tiny目标检测模型在Pytorch当中的实现
+## YOLOV4-Tiny improved
 ---
-**2021年10月12日更新：**   
-**进行了大幅度的更新，对代码的模块进行修改，加了大量注释。**   
+**improved 1**   
+**activation function (LeakyReLU to Mish) improved**   
 
-**2021年5月21日更新：**   
-**增加了各类注意力机制，并添加在FPN部分，检测效果有一定的提升。**
+**improved 2**   
+**Bayes modifier(include sigmoid and soft max) before NMS**
 
-**2021年2月7日更新：**   
-**仔细对照了darknet库的网络结构，发现P5_Upsample和feat1的顺序搞反了，已经调整，重新训练了权值，加入letterbox_image的选项，关闭letterbox_image后网络的map得到提升。**
 
-## 目录
-1. [性能情况 Performance](#性能情况)
-2. [所需环境 Environment](#所需环境)
-3. [注意事项 Attention](#注意事项)
-4. [小技巧的设置 TricksSet](#小技巧的设置)
-5. [文件下载 Download](#文件下载)
-6. [预测步骤 How2predict](#预测步骤)
-7. [训练步骤 How2train](#训练步骤)
-8. [评估步骤 How2eval](#评估步骤)
-9. [参考资料 Reference](#Reference)
-
-## 性能情况
+## Performance
 | 训练数据集 | 权值文件名称 | 测试数据集 | 输入图片大小 | mAP 0.5:0.95 | mAP 0.5 |
 | :-----: | :-----: | :------: | :------: | :------: | :-----: |
 | VOC07+12+COCO | [yolov4_tiny_weights_voc.pth](https://github.com/bubbliiiing/yolov4-tiny-pytorch/releases/download/v1.0/yolov4_tiny_weights_voc.pth) | VOC-Test07 | 416x416 | - | 77.8
